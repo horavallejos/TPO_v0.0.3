@@ -241,9 +241,6 @@ class Usuario:
 template_dir = os.path.dirname(__file__)
 template_dir = os.path.join(template_dir,'templates')
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), './static/img')
-print("\n\n\n\n")
-print(UPLOAD_FOLDER)
-print("\n\n\n\n")
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
@@ -517,4 +514,4 @@ def prod():
     return render_template('prods.html',data=productos,categories=categories)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run()
